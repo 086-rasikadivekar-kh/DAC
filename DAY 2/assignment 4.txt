@@ -1,0 +1,15 @@
+1.
+ans.  select onum, amt, odate from orders;
+
+2.
+ans.  select * from customers  where snum=1001;
+
+3.
+ans.  select  city, sname, snum, comm from salespeople;
+
+4.
+ans.  select rating, cname from customers where city="san jose";
+
+5.
+ans.  select distinct snum, onum from orders order by snum;
+  

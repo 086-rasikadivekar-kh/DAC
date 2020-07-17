@@ -1,0 +1,19 @@
+
+
+1 
+ans- cnum as it is unique.
+
+
+2 
+ans- rating
+
+
+3
+ans-
+row-entity,tuple.
+column-attribute,method.
+
+
+4
+ans-
+It is because rows are not stored in a fragment manner in database server and  are fetched on the basis of their address stored in a server.

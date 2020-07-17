@@ -1,0 +1,10 @@
+assignment-3
+
+1. Does ANSI recognize the data type DATE?
+
+ans- yes  default type YYYY-MM-DD is according to the ANSI.
+
+
+2. Which subdivision of SQL is used to insert values in tables?
+
+ans- The subdivision of SQL is used to insert values in tables is data manupulation language.
