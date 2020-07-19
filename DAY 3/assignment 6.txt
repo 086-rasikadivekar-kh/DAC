@@ -1,0 +1,21 @@
+
+1.
+
+ans. a. select * from orders where odate in ('1990-10-03', '1990-10-04');
+     b. select * from orders where odate in ('1990-10-03', '1990-10-04') ;	
+
+2.
+
+ans. select * from customers where snum in(select snum from salespeople where sname in('peel','motika'));
+
+3.
+
+ans. select cname from customers where SUBSTR(cname,1,1) between 'A'and 'G';
+
+
+4.
+ans. select cname from customers where cname like'C%';
+
+
+5.
+ans. select * from orders where amt is not NULL and amt!=0;
