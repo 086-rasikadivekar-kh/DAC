@@ -1,0 +1,25 @@
+
+1.
+ans.
+select  count(*) from orders;
+
+
+2.
+ans.
+select count(*) from customers where city is not null;
+
+3.
+ans.
+select cnum , min(amt) from orders group by cnum;
+
+4.
+ans.
+ select cname  from customers where cname like 'G%' order by cname limit 1;
+
+5.
+ans.
+select city,  max(rating) from customers group by city;
+
+6.
+ans.
+select odate ,count(distinct(snum)) from orders group by odate;
