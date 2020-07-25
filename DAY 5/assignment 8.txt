@@ -1,0 +1,16 @@
+1.
+ans.
+select onum, snum, (12/100)*amt from orders order by onum;
+
+2.
+ans.select  concat('For the city:' ,concat(city, ' ',concat(' The highest rating is:' ,max(rating)))) from customers group by city;
+
+3.
+ans.
+select rating, cname, cnum  from  customers order by rating desc;
+
+4.
+ans.
+select count(odate) , odate from orders group by odate;
+
+
