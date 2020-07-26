@@ -4,7 +4,7 @@ select onum , cname from orders ,customers  where customers.cnum = orders.cnum;
 
 2.
 ans. 
-select sname,  cname , onum from customers c , orders o , salespeople s where o.snum = c.snum and o.snum = s.snum;
+ select sname,  cname , onum from customers c , orders o , salespeople s where o.cnum = c.cnum and o.snum = s.snum order by onum;
 
 3.
 ans.
