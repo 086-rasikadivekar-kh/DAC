@@ -9,9 +9,4 @@ ans.
 
 ans.
 
-Select cname, city
-from customers
-where rating = (select rating
-                                            from customers
-              where cname = 'Hoffman')
-and cname != 'Hoffman';
+Select cname, city from customers where rating = (select rating from customers where cname = 'Hoffman') and cname != 'Hoffman';
