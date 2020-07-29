@@ -1,0 +1,13 @@
+1.
+ans.
+create table Multicast as(select * from salespeople where snum in(select snum
+                from customers group by snum having count(snum)>1));
+
+2.
+ans.
+
+mysql> delete from customers where cnum not  in (select cnum from orders);
+
+3.
+ans.
+update salespeople set comm=comm*1.20 where snum in(select snum from orders group by snum having sum(amt)>3000);
