@@ -1,0 +1,62 @@
+1. 
+ans.
+select sname ,qty from supplier join spj using(`S#`);
+
+select sname ,qty from supplier join spj on supplier.`S#`=spj.`S#`;
+
+
+2. 
+ans.
+select pname,qty from parts,spj where parts.`P#`=spj.`P#`;
+
+
+3. Display the Project name and Quantity sold.
+ans.
+select jname,qty from projects join spj using(`j#`);
+
+
+4.
+ans.
+select sname,pname,jname,qty 
+from supplier,parts,projects,spj 
+where supplier.`S#`=spj.`S#` and parts.`P#`=spj.`P#`
+and projects.`J#`=spj.`J#`;
+
+
+5.
+ans.
+select sname,pname,projects.city 
+from supplier,parts,projects,spj 
+where supplier.`S#`=spj.`S#` and parts.`P#`=spj.`P#`
+and projects.`J#`=spj.`J#`;
+
+6. 
+ans.
+select pname,qty from parts,spj where parts.`P#`=spj.`P#`and color='red ';
+
+
+7.
+ans.
+select status,qty from supplier,spj where supplier.`s#`=spj.`s#` and status = 20;
+
+
+8.
+ans.
+select pname,qty from parts,spj where parts.`p#`=spj.`p#` and weight > 1400;
+
+
+9. 
+ans.
+select jname,city from projects,spj 
+where projects.`j#`=spj.`j#` and spj.`P#`=
+(select `p#` from spj where qty > 500);
+
+
+10.
+ans. 
+select pname,qty from parts,spj where parts.`p#`=spj.`p#` and weight <1500;
+
+
+11. 
+ans.
+select e.empname ename,m.empname mname from semp e,semp m where e.empno=m.depthead;
