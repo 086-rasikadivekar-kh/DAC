@@ -1,0 +1,31 @@
+1.
+ans.
+create view high_rated_cust 
+as
+select * from customer 
+where rating = 
+(select max(rating) from customer);
+
+
+2.
+ans.
+create view salsppl_inEach_city
+as
+select city,count(city) from salespeople group by city;
+
+3.
+ans.
+create view avg_total_salppl
+as
+select s.sname,avg(o.onum),count(o.onum) 
+from orders o,salespeople s 
+where o.snum=s.snum group by o.snum;
+
+
+4.
+ans.
+creat view salppl_mul_cust
+as
+select sname,cname from customer c,salespeople s 
+where c.snum=s.snum 
+group by sname having count(c.snum) > 1;
