@@ -9,9 +9,9 @@ where rating =
 
 2.
 ans.
-create view salsppl_inEach_city
+create view salsppl_inEach_city1
 as
-select city,count(city) from salespeople group by city;
+select city,count(snum) from salespeople group by city;
 
 3.
 ans.
@@ -24,8 +24,27 @@ where o.snum=s.snum group by o.snum;
 
 4.
 ans.
+
+
 creat view salppl_mul_cust
 as
 select sname,cname from customer c,salespeople s 
 where c.snum=s.snum 
 group by sname having count(c.snum) > 1;
+
+
+
+
+
+
+creat view salppl_mul_cust1 as select s.sname, c.cname from customers c,salespeople s where c.snum=s.snum group by c.snum having count(c.snum) > 1;
+
+
+SELECT min(amt), o.cnum FROM orders o , customers c where o.cnum=c.cnum
+GROUP BY o.cnum ;
+
+
+SELECT min(amt) ,
+cnum
+FROM orders
+GROUP BY cnum;

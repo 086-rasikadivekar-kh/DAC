@@ -13,11 +13,14 @@ ans.
 		 where o.snum=s.snum group by o.snum,s.sname having count(o.snum)>1 order by name;
 3.
 ans.
-select snum from salespeople where city='san jose'
-		
-		                union
-    
-	         select cnum from customers where city='san jose'
-		
-			      union all
-    
+select snum from salespeople where city='san jose' union select cnum from customers where city='san jose'
+union all
+ select onum from orders where odate =1990-10-03';
+
+
+
+CREATE VIEW commission AS
+SELECT snum,
+       comm
+FROM salespeople
+WHERE comm BETWEEN .10 AND .20 with check option;
