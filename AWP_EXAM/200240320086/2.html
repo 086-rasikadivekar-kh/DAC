@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>First Question</title>
+    <script src="2.js">
+
+    </script>
+</head>
+<body>
+ <div class="container-fluid">
+<div class="text-dark">Log In</div>
+    <form>
+        <div class="form-groups mt-3">
+            <label class="text-dark">Username</label>
+            <input  id="inputid"  oninput="inputlike()"  type="text" placeholder="please enter username" class="form-control form-control-sm text-dark" style="width:300px;" required/>
+            <span  class="bg-dark" id="usercheck" style="height:5px;"></span>
+        </div>
+        <div class="form-groups mt-3">
+            <label class="text-dark">Password</label>
+            <inputn oninput="inputlike()"  id="passid" type="text" placeholder="please enter password" class="form-control form-control-sm" style="width:300px;" required/>
+            <span  id="passcheck"></span>
+        </div>
+
+        <input onclick="submithere(this)" type="submit" class="btn btn-info mt-3" />
+
+    </form>
+
+   <div id="commentBox">    
+    <div id="inputBox" style="display: flex;justify-content: space-between; visibility:visible">
+    <div>username</div>
+    <div>password</div>
+    </div>
+    </div>
+</div>
+    
+</body>
+</html>
