@@ -1,0 +1,261 @@
+				Assignment-1
+
+
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+
+ans--
+$ date
+$ cal
+$ bc
+$ echo "today is tuesday.."
+$ who
+$ who
+$ who -m -h
+$ who -m -H
+$ whoami
+$ logname
+logname: no login name
+$ uname
+$clear
+
+
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac.
+ans--
+
+ mkdir a
+ mkdir b
+mkdir c
+cd  a
+touch a.txt
+ls
+a.txt
+cd
+cd b
+b.txt
+touch b.txt
+ls
+b.txt
+cd
+cd c
+touch c.txt
+ls
+c.txt
+cd
+cd-
+cp -r b c
+cd c
+ ls
+b  c.txt
+ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+rootfs         344709116 63627936 281081180  19% /
+none           344709116 63627936 281081180  19% /dev
+none           344709116 63627936 281081180  19% /run
+none           344709116 63627936 281081180  19% /run/lock
+none           344709116 63627936 281081180  19% /run/shm
+none           344709116 63627936 281081180  19% /run/user
+tmpfs          344709116 63627936 281081180  19% /sys/fs/cgroup
+C:\            344709116 63627936 281081180  19% /mnt/c
+D:\            315621372  3547268 312074104   2% /mnt/d
+E:\            315620348   159156 315461192   1% /mnt/e
+
+
+ alias disk='df -h'
+ disk
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs          329G   61G  269G  19% /
+none            329G   61G  269G  19% /dev
+none            329G   61G  269G  19% /run
+none            329G   61G  269G  19% /run/lock
+none            329G   61G  269G  19% /run/shm
+none            329G   61G  269G  19% /run/user
+tmpfs           329G   61G  269G  19% /sys/fs/cgroup
+C:\             329G   61G  269G  19% /mnt/c
+D:\             301G  3.4G  298G   2% /mnt/d
+E:\             301G  156M  301G   1% /mnt/e
+ cd
+mvdir a cdac
+
+
+ a mvdir cdac
+a: command not found
+mv a cdac
+cd cdac
+ ls
+a.txt
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	B)Create file.txt using cat and edit that using nano editor.
+	c)Create 5 empty files using touch command
+	D)Remove previously created directory a , b and c.
+
+ans--
+
+ cat > file1.txt
+ cat > file2.txt
+ cat > file3.txt
+cat >file4.txt
+cat >file5.txt
+
+ grep s file1.txt
+ grep s file1.txt file2.txt file3.txt file4.txt file5.txt
+cdac$ cd
+cd c
+
+nano nanofile.txt
+ cd
+ rm -r c
+$ rm -r b
+ls
+cdac  ossep
+
+
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+	b) Display line numbers along with content
+	c) Display the file in reverse order using tac
+	d) Combine multiple files using cat command
+
+ans--
+vi pri.txrt
+cat pri.txrt
+
+cat -n pri.txrt
+tac c.txrt
+
+ tac file1.txt file2.txt file3.txt file4.txt
+ cat file1.txt file2.txt file3.txt file4.txt > file.txt
+cat file.txt
+
+
+
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	b) sort the files in ascending, descending order
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+
+
+ans--
+
+
+mkdir random
+ cd
+cd random
+mkdir first
+ cd first
+ mkdir first11
+cd
+cd random
+ mkdir second
+ mkdir 3rd
+ ls
+ cat > file.txt
+column -t file.txt
+ row file.txt
+
+ sort
+
+
+random$ cd
+sort random
+cd random
+ sort file.txt
+cat > fruits
+apple
+banana
+pineapple
+grapes
+sort fruits
+apple
+banana
+grapes
+pineapple
+sort -r fruits
+pineapple
+grapes
+banana
+apple
+mkdir .hidden
+ ls
+ ls -a
+ls -a
+touch -m file.txt
+pstat file.txt
+  
+ls -t
+
+
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+
+ans--
+
+
+ chmod go=r
+cd random
+ chmod go=r priyanka
+cd priyanka
+ chmod a+w+r a.txt b.txt
+ chmod a+w c.txt
+chmod a+x d.sh
+cat d.sh
+d file
+cat c.txt
+inside
+
+
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+
+
+ans--
+chmod go=x rasika
+
+
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+
+ans--
+ chmod go-wx a.txt
+
+Q4. Use echo to list the all files of your home directory.
+
+ans--
+
+echo *
+
+Q5. Use echo to list the all files of /etc/ directory
+ans--
+
+ls /etc
+
+Q6. Use echo to append your name to a.txt
+
+ans-
+
+echo "rasika" >a.txt
+cat a.txt
+
+
+
+
