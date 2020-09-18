@@ -1,0 +1,510 @@
+-----> Switch Case
+
+
+switch case syntax 
+
+switch(char | byte | short | int | enum | String expression ){
+	caselabel1 :
+		statement 1;
+	caselabel2: 
+		statement 2;
+	------
+	------
+	--------
+	
+	default:
+		                           staement;
+
+
+
+}
+
+
+
+-----> take day number output day name
+
+-----> SwitchDemo.java
+
+
+
+
+import java.util.Scanner;
+
+class SwitchDemo{
+
+	public static void name(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter day name");
+		byte dayNo = sc.nextByte();
+		switch(dayNo){
+			case 1 :
+				System.out.println("mon");
+				break; // not compulsary
+			case 2:
+				System.out.println("tues");
+				break;	
+			case 3 :
+				System.out.println("wed");
+				break;
+			case 4:
+				System.out.println("thurs");
+				break;	
+			case 5 :
+				System.out.println("fri");
+				break;
+			case 6:
+				System.out.println("sat");	
+				break;
+			case 7 :
+				System.out.println("sun");
+				break;
+			default:
+				System.out.println("Not a day");	
+
+		}
+		
+		
+
+
+
+}
+
+
+}
+
+
+
+
+-----> SwitchDemo1.java
+
+class SwitchDemo1{
+
+	public static void name(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a character");
+		char ch = sc.next.charAt(0);
+		switch(ch){
+			case 'a' :
+				System.out.println(ch+"is a vowel");
+				break; // not compulsary
+			case 'e':
+				System.out.println(ch+"is a vowel");
+				break;	
+			case 'i' :
+				System.out.println(ch+"is a vowel");
+				break;
+			case 'o':
+				System.out.println(ch+"is a vowel");
+				break;	
+			case 'e' :
+				System.out.println(ch+"is a vowel");
+				break;
+			case 'o':
+				System.out.println(ch+"is a vowel");	
+				break;
+			case 'u': 
+				System.out.println(ch+"is a vowel");
+				break;
+			default:
+				System.out.println("Not a vowel");	
+
+		}
+		
+		
+
+
+
+}
+
+
+
+
+
+
+
+----------------->SwitchDemo2.java
+
+
+
+class SwitchDemo2{
+
+	public static void name(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a character");
+		char ch = sc.next.charAt(0);
+		switch(ch){
+			case 'a' :
+			case 'e':          //LOWECASE
+			case 'i' :
+			case 'o':
+			case 'u':
+				System.out.println(ch +"is a vowel");
+				break; 
+			case 'A' :
+			case 'E':          //UPPERCASE
+			case 'I' :
+			case 'O':
+			case 'U' :
+
+				System.out.println(ch +"is a vowel");
+				break; 
+			
+
+
+			default:
+				System.out.println("Not a vowel");	
+
+		}
+
+
+
+}
+
+
+-------> loops in java:
+	
+	for loop
+	------ synatx:
+	          for(initialization; condition ; increment){}
+
+
+
+------> ForDemo.java
+class ForDemo{
+
+	public sstatic void main(String args[]){
+		for(int i=0;j=9;i<10;i++;j--){
+			System.out.println(i,j);	
+		}
+	
+	}
+
+
+
+}
+
+
+=> 0-9 9-0
+
+
+
+
+---------->
+
+
+
+class ForDemo3{
+
+	public static void main (String arg[]){
+
+		outer: //labeled for loop
+		for(int i=1; i<=5; i++){
+			for(int j=1;j<=5;j++){
+				system.out.println(""+j);
+				if(j==3)
+					break outer;
+			}
+			System.out.println("");
+		}
+		System.out.println("okkk");
+
+}
+
+
+
+
+}
+
+
+=> 1 2 3 
+okkk
+
+
+
+
+-------> loop in java :
+
+for loop
+--synatx
+
+while loop
+---synatx
+initialization
+while(condition){
+increment;
+}
+
+
+
+
+-----> WhileDemo.java
+
+
+import java.util.Scanner;
+class WhileDemo{
+	public  static void main(String args[]){
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any sum");	
+		int n = sc.extInt();
+		while(n<10){
+			System.out.println(n);
+			n++;
+		}
+		
+	
+
+	}
+
+}
+
+
+
+
+
+
+-----> DoWhileDemo.java
+
+
+import java.util.Scanner;
+class DoWhileDemo{
+	public  static void main(String args[]){
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any sum");	
+		int n = sc.extInt();
+		do{
+			System.out.println(n);
+			n++;
+		}while(n<10);
+		
+	}
+
+}
+
+---> array 
+It is an indexed collection of similar data elements than has fixed size.
+--> array is an object
+--> make array : 1. declare array variable 2. create array
+
+---> array declaration syntax:
+<element-type> <array-name> [];
+or,
+<element-type>[] <array-name>;
+---> array creation synatx:
+<array-name> = new <element-type>[size];
+
+----> array declaration and creation can be combined
+ <element-type> <array-name> [] = new <element-type>[size];
+
+
+Eg. int ar[];
+int [] ar;
+int a[],b,c; // a is array variable and b,c are integer variables; 
+int [] a,b,c; // a,b,c are array variable
+ar = new int[5];
+int ar[] = new int [5];
+
+
+
+-----> ArrayDemo.java
+
+import java.util.Scanner;
+classArrayDemo{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		int ar[] = new int[3];
+		for(int i=0; i<3;i++){
+			System.out.println("Enter element");
+			ar[i] = sc.nextInt();
+		}
+		for(int i=0; i<3;i++){
+			System.out.println(ar[i]);
+		}
+	}
+
+}
+
+
+
+
+
+-----> ArrayDemo1.java
+import java.util.Scanner;
+classArrayDemo1{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		int ar[] = new int[5];
+		for(int i=0; i,ar.length;i++){                      //---1
+			System.out.println("Enter element");
+			ar[i] = sc.nextInt();
+		}
+		for(int i=0; i<ar.length;i++){       //---2       
+			System.out.println(ar[i]);
+		}
+	
+
+	}
+}
+
+
+
+--> print array element
+--> sum of array elements
+--> max/min element in array
+--> search any element
+traversing
+iteration(2nd for loop)
+
+---> for each loop [advance array]
+
+  ----> for traversing any collection
+
+syntax:
+  ----> for(<element-type><variable>:<collection-name>){}
+
+Eg.
+
+int ar[] = new int[3];
+for(int a : ar) {}
+
+
+ 
+
+
+-----> ArrayDemo2.java
+import java.util.Scanner;
+classArrayDemo2{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		int ar[] = new int[5];
+		for(int i=0; i,ar.length;i++){                      //---1
+			System.out.println("Enter element");
+			ar[i] = sc.nextInt();
+		}
+		for(int a : ar){       //---2 (traversing is easy here ; result is  same as ArrayDemo1 )      
+			System.out.println(a);
+		}
+	
+
+	}
+}
+
+
+int ar[] = new int[3];
+
+
+
+
+--------->
+
+-----> ArrayDemo2.java
+import java.util.Scanner;
+classArrayDemo2{
+	public static void main(String args[]){
+		
+	boolean ar[] = new boolean[3];
+	for (boolean  a:ar ){
+		System.out.println(a);
+	
+	}
+}
+
+
+=>
+false
+false
+false
+
+
+
+
+
+array initialization:
+
+syntax:
+
+<element-type><array-name>[] = {<element-list>};
+
+or,
+
+<element-type><array-name>[] = new <element-type> [] {<element-list>};
+
+
+Eg.
+int ar[] ={1,2,3,4};
+
+int ar[] = new int[] {1,2,3,4}
+
+
+
+---->
+
+class ArrayDemo4{
+	public static void main (String args[]){
+	          //      char ar[] = {'a', 'b', 'c', 'd', 'e'};
+		char ar[] = new char[] {'a', 'b', 'd','e'}
+ 		for(char a : ar){
+			System.out.println(a);
+		}
+		
+	
+	}
+}
+
+
+
+
+
+-------> multidimensional array : array of array
+
+ar0 ->  1 2 3
+ar1 -> 4 5 6
+ar2 -> 5 6 9
+
+syntax : [2-D]
+
+<element-type> <array-name>[][] = new <element-type>[row][cols];  // cols are optional
+
+
+row : no of arrays in the array 
+cols : no of elements in each row
+
+
+------> 
+
+
+class ArrayDemo5{
+	public static void main (String args[]){
+		int a[] = {1,2,3};
+		int b[] ={4,5,6};
+		int c[] = {7,8,9};
+		int arr[][] = new int[3][];
+		arr[0] = a;
+		arr[1] = b;
+		arr[2] = c;
+		for (int i=0 ; i< arr.length; i++){
+			for(int j=0; j<arr[i].length; j++){
+				System.out.println(""+arr[i][j]);		
+			}
+			System.out.println("");	
+			
+		}
+
+
+
+	
+	}
+}
+
+
+
+-> 1,23
+4,5,6
+7,8,9
+
+
+
+
+
+-----> assignment --->16 -22
